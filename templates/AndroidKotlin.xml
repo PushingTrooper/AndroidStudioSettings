@@ -1,0 +1,23 @@
+<templateSet group="AndroidKotlin">
+  <template name="mtld" value="private val _$variableName$ = MutableLiveData&lt;$type$&gt;()&#10;val $variableName$: LiveData&lt;$type$&gt; = _$variableName$" description="Creates MutableLiveData and LiveData" toReformat="false" toShortenFQNames="true">
+    <variable name="variableName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_CLASS" value="true" />
+      <option name="KOTLIN_EXPRESSION" value="true" />
+      <option name="KOTLIN_STATEMENT" value="true" />
+      <option name="KOTLIN_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="rcv" value="class $className$Adapter(val $variableName$: ArrayList&lt;$variableType$&gt;) :&#10;    RecyclerView.Adapter&lt;$className$Adapter.ViewHolder&gt;() {&#10;&#10;    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {&#10;        &#10;    }&#10;&#10;    override fun onBindViewHolder(holder: ViewHolder, position: Int) {&#10;        val current$variableName$ = $variableName$[position]&#10;    }&#10;&#10;    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {&#10;        val view = LayoutInflater.from(parent.context)&#10;            .inflate(R.layout.$layoutId$, parent, false)&#10;&#10;        return ViewHolder(view)&#10;    }&#10;&#10;    override fun getItemCount(): Int = $variableName$.size&#10;}" description="Creates a RecyclerView" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="variableName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="variableType" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="layoutId" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+      <option name="KOTLIN_COMMENT" value="false" />
+      <option name="KOTLIN_EXPRESSION" value="false" />
+    </context>
+  </template>
+</templateSet>

@@ -1,0 +1,10 @@
+<templateSet group="Android">
+  <template name="mtld" value="private final MutableLiveData&lt;$type$&gt; _$variableName$ = new MutableLiveData&lt;&gt;();&#10;public LiveData&lt;$type$&gt; $variableName$ = _$variableName$;" description="Creates LiveData" toReformat="false" toShortenFQNames="true">
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="variableName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
+</templateSet>
